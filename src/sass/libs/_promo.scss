@@ -1,0 +1,20 @@
+.promo {
+    position: relative;
+    min-height: 100vh;
+    background: url("../img/main_bg.jpg");
+
+    .title {
+        margin-left: 10px;
+        color: rgb(197, 211, 211);
+    }
+
+    h1 {
+        margin-bottom: 25px;
+        color: rgb(197, 211, 211);
+    }
+
+    .promo__link {
+        width: 135px;
+        height: 45px;
+    }
+}
