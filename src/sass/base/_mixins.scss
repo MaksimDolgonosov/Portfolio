@@ -11,3 +11,16 @@
         left: -10px;
     }
 }
+@mixin before_circleImg {
+    &::before {
+        content: "";
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        background-color: $main_color;
+        border-radius: 100%;
+        z-index: -1;
+        top: -15%;
+        left: 0px;
+    }
+}
