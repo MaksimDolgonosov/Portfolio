@@ -8,7 +8,7 @@
 
     &__aboutMe {
         width: 570px;
-        height: 270px;
+        min-height: 240px;
     }
 
     &__title {
@@ -42,8 +42,10 @@
     &__items {
         width: 570px;
         display: grid;
-        grid-template-columns: repeat(2, 260px);
-        grid-template-rows: repeat(2, 116px);
+        grid-template-columns: repeat(2, minmax(260px, auto));
+        grid-template-rows: repeat(2, minmax(116px, auto));
+        grid-auto-rows: minmax(116px, auto);
+        align-items: start;
         column-gap: 50px;
         row-gap: 30px;
     }
@@ -52,17 +54,24 @@
         position: relative;
         width: 260px;
         display: grid;
-        grid-template-columns: [col1-s]50px [col2-s]200px;
-        grid-template-rows: [row1-s]20px [row2-s]100px;
+        grid-template-columns: 40px 200px;
+        grid-template-rows: minmax(20px, auto) minmax(100px, auto);
         column-gap: 20px;
         row-gap: 6px;
-        @include before_circleImg;
+
+        @include before_circle;
+
+        &:before {
+            top: 0%;
+            left: 0px;
+        }
 
     }
 
     &__itemImg {
         display: inline;
-        margin-left: 15px;
+        margin-top: 15px;
+        margin-left: 17px;
         grid-column: 1/2;
         grid-row: 1/3;
 
@@ -82,12 +91,13 @@
 
     &__gridContainer {
         display: grid;
-        width: 1040px;
-        height: 604px;
+        // width: 1040px;
+        // min-height: 604px;
         grid-template-columns: 453px 570px;
-        grid-template-rows: 240px 364px;
+        grid-template-rows: minmax(240px, auto) minmax(334px, auto);
+        grid-auto-rows: minmax(230px, auto);
         column-gap: 70px;
-        row-gap: 20px;
+        row-gap: 40px;
     }
 }
 
