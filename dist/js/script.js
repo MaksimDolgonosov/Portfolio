@@ -13,4 +13,13 @@ window.addEventListener("DOMContentLoaded", () => {
     }
     close.addEventListener("click", closeMenu);
     overlay.addEventListener("click", closeMenu);
+
+
+    const usagePercents = document.querySelectorAll(".usage__wrapper-perc");
+    const subLine = document.querySelectorAll(".usage__wrapper-line-subline");
+
+    usagePercents.forEach((item, i) => {
+        subLine[i].style.width = item.innerHTML;
+    });
+
 });
