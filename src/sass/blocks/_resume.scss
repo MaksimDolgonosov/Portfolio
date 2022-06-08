@@ -54,10 +54,10 @@
         &::after {
             content: "";
             position: absolute;
-            height: calc(100% + 16px);
+            height: calc(100% + 18px);
             width: 1px;
             background-color: #000;
-            top: -16px;
+            top: -18px;
             left: -48px;
         }
     }
@@ -67,15 +67,17 @@
         display: grid;
         grid-template-columns: 40px 355px;
         column-gap: 15px;
+
         &::after {
-            content:"";
+            content: "";
             position: absolute;
             width: 48px;
             height: 1px;
             background-color: #000;
-            top: 18px;
+            top: 19px;
             left: -48px;
         }
+
         @include before_circle;
 
         &:before {
