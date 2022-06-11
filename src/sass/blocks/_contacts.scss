@@ -97,6 +97,7 @@
                 resize: none;
 
             }
+
             label {
                 display: block;
                 position: absolute;
@@ -113,12 +114,38 @@
         }
 
         &-button {
-            border: none;
-            width: 219px;
-            height: 45px;
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 21px;
+            grid-column: 1/3;
+            display: grid;
+            grid-template-columns: 207px 295px;
+            column-gap: 30px;
+
+            .btn {
+                border: none;
+                // width: 219px;
+                // height: 45px;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 21px;
+            }
+
+            &-policy {
+                display: flex;
+                align-items: center;
+
+                input {
+                    margin-right: 7px;
+                }
+
+                span {
+                    align-self: center;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 12px;
+                }
+            }
+
+
+
         }
     }
 }
