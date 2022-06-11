@@ -19,6 +19,8 @@ body {
     margin: 0 auto;
 }
 
+
+
 @import "blocks/promo";
 @import "blocks/titles";
 @import "blocks/btn";
@@ -31,3 +33,13 @@ body {
 @import "blocks/portfolio";
 @import "blocks/price";
 @import "blocks/contacts";
+
+.mainColToSocial {
+    color: $main_color;
+}
+.mainColToDivider {
+    background-color: $main_color;
+}
+.mainColToSocialLink {
+    fill: $main_color;
+}

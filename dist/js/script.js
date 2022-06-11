@@ -22,4 +22,33 @@ window.addEventListener("DOMContentLoaded", () => {
         subLine[i].style.width = item.innerHTML;
     });
 
+
+    const social = document.querySelector(".sidepanel__text");
+    const divider = document.querySelector(".sidepanel__divider");
+    const socialSvg = document.querySelectorAll(".sidepanel__link svg path");
+    console.log(socialSvg);
+
+
+
+    window.addEventListener("scroll", () => {
+        console.log(document.documentElement.scrollTop);
+        if (document.documentElement.scrollTop >= 480) {
+            social.classList.add("mainColToSocial");
+            divider.classList.add("mainColToDivider");
+            socialSvg.forEach(el => {
+                el.classList.add("mainColToSocialLink");
+            });
+        } else {
+            social.classList.remove("mainColToSocial");
+            divider.classList.remove("mainColToDivider");
+            socialSvg.forEach(el => {
+                el.classList.remove("mainColToSocialLink");
+            });
+        }
+    });
+
+
+
+
+
 });
