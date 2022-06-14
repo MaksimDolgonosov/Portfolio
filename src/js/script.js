@@ -26,12 +26,11 @@ window.addEventListener("DOMContentLoaded", () => {
     const social = document.querySelector(".sidepanel__text");
     const divider = document.querySelector(".sidepanel__divider");
     const socialSvg = document.querySelectorAll(".sidepanel__link svg path");
-    console.log(socialSvg);
+
 
 
 
     window.addEventListener("scroll", () => {
-        console.log(document.documentElement.scrollTop);
         if (document.documentElement.scrollTop >= 480) {
             social.classList.add("mainColToSocial");
             divider.classList.add("mainColToDivider");

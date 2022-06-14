@@ -31,7 +31,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
     window.addEventListener("scroll", () => {
-
         if (document.documentElement.scrollTop >= 480) {
             social.classList.add("mainColToSocial");
             divider.classList.add("mainColToDivider");
