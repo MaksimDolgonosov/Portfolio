@@ -14,6 +14,9 @@
     .container {
         max-width: 960px;
     }
+    .promo {
+        background: url('../img/main_bg.jpg') no-repeat 60%/cover;
+    }
 
     .descr {
         &__aboutMe {
@@ -82,7 +85,7 @@
     }
 
     .promo {
-        background: url('../img/main_bg.jpg') no-repeat 55%/cover;
+        background: url('../img/main_bg.jpg') no-repeat 58%/cover;
     }
 
     .descr {
