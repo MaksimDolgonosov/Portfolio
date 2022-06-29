@@ -63,23 +63,52 @@ window.addEventListener("DOMContentLoaded", () => {
                 // console.log(formData);
                 if (request.status == 200) {
                     form.reset();
-                    document.querySelector('.overlay').style.display = "block";
-                    document.querySelector('.modal_thanks').style.display = "block";
+                    document.querySelector('.overlay').style.visibility = "visible";
+                    document.querySelector('.modal_thanks').style.visibility = "visible";
+                    document.querySelector('.overlay').style.opacity = "1";
+                    document.querySelector('.modal_thanks').style.opacity = "1";
                     document.body.style.overflow = "none";
                     setTimeout(() => {
-                        document.querySelector('.overlay').style.display = "none";
-                        document.querySelector('.modal_thanks').style.display = "none";
+                        document.querySelector('.overlay').style.visibility = "hidden";
+                        document.querySelector('.modal_thanks').style.visibility = "hidden";
+                        document.querySelector('.overlay').style.opacity = "0";
+                        document.querySelector('.modal_thanks').style.opacity = "0";
                         document.body.style.overflow = "";
-                    }, 2000);
+                    }, 3000);
+
+
+                    // document.querySelector('.overlay').style.display = "block";
+                    // document.querySelector('.modal_thanks').style.display = "block";
+                    // document.body.style.overflow = "none";
+                    // setTimeout(() => {
+                    //     document.querySelector('.overlay').style.display = "none";
+                    //     document.querySelector('.modal_thanks').style.display = "none";
+                    //     document.body.style.overflow = "";
+                    // }, 3000);
                 } else {
-                    document.querySelector('.overlay').style.display = "block";
-                    document.querySelector('.modal_error').style.display = "block";
+
+                    document.querySelector('.overlay').style.visibility = "visible";
+                    document.querySelector('.modal_error').style.visibility = "visible";
+                    document.querySelector('.overlay').style.opacity = "1";
+                    document.querySelector('.modal_error').style.opacity = "1";
                     document.body.style.overflow = "none";
                     setTimeout(() => {
-                        document.querySelector('.overlay').style.display = "none";
-                        document.querySelector('.modal_error').style.display = "none";
+                        document.querySelector('.overlay').style.visibility = "hidden";
+                        document.querySelector('.modal_error').style.visibility = "hidden";
+                        document.querySelector('.overlay').style.opacity = "0";
+                        document.querySelector('.modal_error').style.opacity = "0";
                         document.body.style.overflow = "";
-                    }, 2000);
+                    }, 3000);
+
+
+                    // document.querySelector('.overlay').style.display = "block";
+                    // document.querySelector('.modal_error').style.display = "block";
+                    // document.body.style.overflow = "none";
+                    // setTimeout(() => {
+                    //     document.querySelector('.overlay').style.display = "none";
+                    //     document.querySelector('.modal_error').style.display = "none";
+                    //     document.body.style.overflow = "";
+                    // }, 3000);
                 }
 
             });
