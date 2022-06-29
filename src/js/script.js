@@ -55,19 +55,25 @@ window.addEventListener("DOMContentLoaded", () => {
         form.addEventListener("submit", e => {
             e.preventDefault();
             const request = new XMLHttpRequest();
-            request.open("POST", "../mailer/smart.php");
+            request.open("POST", "mailer/smart.php");
             const formData = new FormData(form);
-            let jsonRequest = {};
-            formData.forEach((item, key) => {
-                jsonRequest[key] = encodeURI(item);
-            });
-            console.log(formData);
-            console.log(jsonRequest);
-            console.log(JSON.stringify(jsonRequest));
-            request.send(JSON.stringify(jsonRequest));
-
+            request.send(formData);
             request.addEventListener("load", () => {
                 console.log(request.status);
+                console.log(formData);
+                if (request.status == 200) {
+                    form.reset();
+
+                    // document.querySelector('#thanks').style.display = "block";
+                    // setTimeout(() => {
+                    //     document.querySelectorAll('.modal').forEach(modal => {
+                    //         document.querySelector(".overlay").style.display = "none";
+                    //         modal.style.display = "none";
+                    //         document.body.style.overflow = "";
+                    //     });
+                    // }, 2000);
+                }
+
             });
         });
     }
@@ -75,26 +81,26 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 
-    $('form').submit(function (e) {
-        e.preventDefault();
-        console.log($(this).serialize());
-        $.ajax({
-            type: "POST",
-            url: "mailer/smart.php",
-            data: $(this).serialize()
+    // $('form').submit(function (e) {
+    //     e.preventDefault();
+    //     console.log($(this).serialize());
+    //     $.ajax({
+    //         type: "POST",
+    //         url: "mailer/smart.php",
+    //         data: $(this).serialize()
 
-        }
+    //     }
 
-        ).done(function () {
+    //     ).done(function () {
 
-            $(this).find("input").val("");
-            $('#consultation, #order').fadeOut();
-            $('.overlay, #thanks').fadeIn('slow');
+    //         $(this).find("input").val("");
+    //         $('#consultation, #order').fadeOut();
+    //         $('.overlay, #thanks').fadeIn('slow');
 
-            $('form').trigger('reset');
-        });
-        return false;
-    });
+    //         $('form').trigger('reset');
+    //     });
+    //     return false;
+    // });
 
 
 
