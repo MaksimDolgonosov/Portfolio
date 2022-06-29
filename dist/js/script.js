@@ -59,19 +59,27 @@ window.addEventListener("DOMContentLoaded", () => {
             const formData = new FormData(form);
             request.send(formData);
             request.addEventListener("load", () => {
-                console.log(request.status);
-                console.log(formData);
+                // console.log(request.status);
+                // console.log(formData);
                 if (request.status == 200) {
                     form.reset();
-
-                    // document.querySelector('#thanks').style.display = "block";
-                    // setTimeout(() => {
-                    //     document.querySelectorAll('.modal').forEach(modal => {
-                    //         document.querySelector(".overlay").style.display = "none";
-                    //         modal.style.display = "none";
-                    //         document.body.style.overflow = "";
-                    //     });
-                    // }, 2000);
+                    document.querySelector('.overlay').style.display = "block";
+                    document.querySelector('.modal_thanks').style.display = "block";
+                    document.body.style.overflow = "none";
+                    setTimeout(() => {
+                        document.querySelector('.overlay').style.display = "none";
+                        document.querySelector('.modal_thanks').style.display = "none";
+                        document.body.style.overflow = "";
+                    }, 2000);
+                } else {
+                    document.querySelector('.overlay').style.display = "block";
+                    document.querySelector('.modal_error').style.display = "block";
+                    document.body.style.overflow = "none";
+                    setTimeout(() => {
+                        document.querySelector('.overlay').style.display = "none";
+                        document.querySelector('.modal_error').style.display = "none";
+                        document.body.style.overflow = "";
+                    }, 2000);
                 }
 
             });
