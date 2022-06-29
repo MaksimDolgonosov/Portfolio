@@ -46,6 +46,57 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+// отправка формы
+const forms = document.querySelectorAll("form");
+
+forms.forEach(form => postData(form));
+
+function postData(form) {
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+        const request = new XMLHttpRequest();
+        request.open("POST", "mailer/smart.php");
+        const formData = new FormData(form);
+        let jsonRequest = {};
+        formData.forEach((item, key) => {
+            jsonRequest[key] = encodeURI(item);
+        });
+        console.log(formData);
+        console.log(jsonRequest);
+        console.log(JSON.stringify(jsonRequest));
+        request.send(JSON.stringify(jsonRequest));
+
+        request.addEventListener("load", () => {
+            console.log(request.status);
+        });
+    });
+}
+
+
+
+
+$('form').submit(function (e) {
+    e.preventDefault();
+    console.log($(this).serialize());
+    $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+
+    }
+
+    ).done(function () {
+
+        $(this).find("input").val("");
+        $('#consultation, #order').fadeOut();
+        $('.overlay, #thanks').fadeIn('slow');
+
+        $('form').trigger('reset');
+    });
+    return false;
+});
+
+
 
 
 
