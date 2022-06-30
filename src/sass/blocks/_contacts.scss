@@ -23,8 +23,8 @@
 
     &__line {
         width: 60px;
-        height: 0px;
-        border: 2px solid $main_color;
+        height: 2px;
+        background-color: $main_color;
         margin-top: 5px;
         margin-bottom: 20px;
         border-radius: 50px;
