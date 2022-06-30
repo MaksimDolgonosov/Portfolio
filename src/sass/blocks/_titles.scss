@@ -47,8 +47,9 @@
     &__section_line {
         margin: 0 auto;
         width: 60px;
-        height: 0px;
-        border: 2px solid $main_color;
+        height: 2px;
+        background-color: $main_color;
+        // border: 2px solid $main_color;
         margin-top: 25px;
         border-radius: 50px;
     }
