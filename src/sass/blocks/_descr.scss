@@ -43,11 +43,11 @@
         width: 570px;
         display: grid;
         grid-template-columns: repeat(2, minmax(260px, auto));
-        grid-template-rows: repeat(2, minmax(116px, auto));
+        grid-template-rows: repeat(2, minmax(80px, auto));
         grid-auto-rows: minmax(116px, auto);
         align-items: start;
         column-gap: 50px;
-        row-gap: 30px;
+        row-gap: 20px;
     }
 
     &__item {
@@ -55,7 +55,7 @@
         width: 260px;
         display: grid;
         grid-template-columns: 40px 200px;
-        grid-template-rows: minmax(20px, auto) minmax(100px, auto);
+        grid-template-rows: minmax(20px, auto) minmax(80px, auto);
         column-gap: 20px;
         row-gap: 6px;
 
@@ -97,7 +97,7 @@
         grid-template-rows: minmax(240px, auto) minmax(334px, auto);
         grid-auto-rows: minmax(230px, auto);
         column-gap: 70px;
-        row-gap: 40px;
+        row-gap: 30px;
     }
 }
 
