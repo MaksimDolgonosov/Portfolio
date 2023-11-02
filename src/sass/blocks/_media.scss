@@ -16,7 +16,7 @@
     }
 
     .promo {
-        background: url('../img/main_bg.jpg') no-repeat 60%/cover;
+        background: url('../img/main_bg3.jpg') no-repeat 60%/cover;
     }
 
     .descr {
@@ -96,6 +96,20 @@
 
 
             }
+
+            &-react {
+                // display: flex;
+                // justify-content: space-between;
+                // align-items: center;
+
+
+                grid-template-columns: repeat(2, 280px);
+
+                // img {
+                //     width: 45%;
+
+                // }
+            }
         }
     }
 
@@ -160,7 +174,7 @@
     }
 
     .promo {
-        background: url('../img/main_bg.jpg') no-repeat 58%/cover;
+        background: url('../img/main_bg3.jpg') no-repeat 58%/cover;
     }
 
     .descr {
@@ -335,7 +349,7 @@
 
         }
 
-        background: url('../img/main_bg.jpg') no-repeat 60%/cover;
+        background: url('../img/main_bg3.jpg') no-repeat 60%/cover;
     }
 
     .descr {
@@ -432,6 +446,14 @@
     }
 
     .portfolio {
+        &__items {
+            &-react {
+                grid-template-columns: repeat(1, 280px);
+                grid-template-rows: repeat(2, 280px);
+                row-gap: 15px;
+            }
+        }
+
         margin-top: 40px;
 
         .title__section_title {
@@ -448,6 +470,7 @@
             // grid-template-rows: repeat(3, 44px);
             // column-gap: 25px;
             // row-gap: 15px;
+
         }
 
         &__item {
@@ -468,7 +491,7 @@
     }
 
     .promo {
-        background: url('../img/main_bg.jpg') no-repeat 62%/cover;
+        background: url('../img/main_bg3.jpg') no-repeat 62%/cover;
 
         &__title {
             font-size: 26px;
@@ -668,12 +691,13 @@
             }
 
             &-button {
-                
+
                 grid-column: 1/2;
                 display: flex;
-                
+
                 width: 100%;
                 flex-wrap: wrap;
+
                 // grid-template-columns:100%;
                 // grid-template-rows: 45px 45px;
                 // row-gap: 10px;
@@ -694,18 +718,20 @@
                     align-items: center;
                     justify-content: center;
                     margin-bottom: 15px;
-                    
+
                     input {
                         width: 30px;
                         margin-right: 0px;
-                        
+
                     }
+
                     span {
                         width: 170px;
                         // align-self: center;
                         font-weight: 500;
                         font-size: 12px;
                         line-height: 12px;
+
                         a {
                             display: inline;
                         }
